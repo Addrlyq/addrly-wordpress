@@ -14,7 +14,7 @@ Addrly validates email addresses in real time against a database of 10M+ known d
 
 ## Installation
 
-1. Download the [latest release](https://github.com/addrlyq/addrly-wordpress/releases)
+1. Download the latest release
 2. Upload the `addrly` folder to `/wp-content/plugins/`
 3. Activate through **Plugins → Installed Plugins**
 4. Done — your site is protected

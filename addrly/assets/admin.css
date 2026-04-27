@@ -1,0 +1,108 @@
+/**
+ * Addrly Admin Styles
+ */
+
+.addrly-wrap {
+    max-width: 800px;
+}
+
+.addrly-wrap h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.addrly-logo svg {
+    vertical-align: middle;
+}
+
+/* Cards */
+.addrly-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.addrly-card h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2em;
+}
+
+.addrly-card .form-table {
+    margin-top: 0;
+}
+
+.addrly-card .form-table th {
+    padding-left: 0;
+    width: 120px;
+}
+
+/* Limits info */
+.addrly-limits-info {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.addrly-limits-info h4 {
+    margin: 0 0 10px 0;
+}
+
+.addrly-limits-info table {
+    background: #f9f9f9;
+}
+
+/* Logs */
+.addrly-logs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.addrly-logs-header h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* FAQ */
+.addrly-faq h4 {
+    margin: 15px 0 5px 0;
+    color: #1d2327;
+}
+
+.addrly-faq p {
+    margin: 0 0 15px 0;
+    color: #50575e;
+}
+
+/* Save status */
+#addrly-save-status {
+    margin-left: 10px;
+}
+
+#addrly-save-status .spinner {
+    margin-top: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .addrly-card .form-table th {
+        width: auto;
+    }
+    
+    .addrly-logs-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}

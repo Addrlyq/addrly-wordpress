@@ -9,13 +9,13 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Addrly - Email Validation
- * Plugin URI:        https://addrly.app
+ * Plugin URI:        https://addrly.io
  * Description:       Protect your WordPress site from disposable emails and spam domains. Works out of the box with 60 requests/hour free.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Addrly
- * Author URI:        https://addrly.app
+ * Author URI:        https://addrly.io
  * Text Domain:       addrly
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('ADDRLY_VERSION', '1.0.0');
+define('ADDRLY_VERSION', '1.1.0');
 define('ADDRLY_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('ADDRLY_PLUGIN_URL', plugin_dir_url(__FILE__));
 
@@ -43,7 +43,7 @@ class Addrly
     /**
      * Base URL for the Addrly API.
      */
-    private $api_base_url = 'https://api.addrly.app/api/v1';
+    private $api_base_url = 'https://api.addrly.io/api/v1';
 
     /**
      * Maximum number of error logs to keep.
@@ -158,7 +158,7 @@ class Addrly
                             <span id="addrly-save-status"></span>
                             <p class="description">
                                 <?php esc_html_e('Get a free API key at', 'addrly'); ?>
-                                <a href="https://addrly.app/signup" target="_blank">addrly.app/signup</a>
+                                <a href="https://addrly.io/signup" target="_blank">addrly.io/signup</a>
                                 <?php esc_html_e('for higher limits.', 'addrly'); ?>
                             </p>
                         </td>
@@ -178,7 +178,15 @@ class Addrly
                         </tr>
                         <tr>
                             <td><?php esc_html_e('Pro Plan', 'addrly'); ?></td>
-                            <td><strong>100,000 <?php esc_html_e('requests/month', 'addrly'); ?></strong></td>
+                            <td><strong>10,000 <?php esc_html_e('requests/month', 'addrly'); ?></strong></td>
+                        </tr>
+                        <tr>
+                            <td><?php esc_html_e('Ultra Plan', 'addrly'); ?></td>
+                            <td><strong>250,000 <?php esc_html_e('requests/month', 'addrly'); ?></strong></td>
+                        </tr>
+                        <tr>
+                            <td><?php esc_html_e('Scale Plan', 'addrly'); ?></td>
+                            <td><strong>500,000 <?php esc_html_e('requests/month', 'addrly'); ?></strong></td>
                         </tr>
                     </table>
                 </div>
@@ -222,7 +230,7 @@ class Addrly
                 <h2><?php esc_html_e('FAQ', 'addrly'); ?></h2>
                 
                 <h4><?php esc_html_e('Do I need an API key to use this plugin?', 'addrly'); ?></h4>
-                <p><?php esc_html_e('No, an API key is not required. The plugin works out of the box with a limit of 60 requests per hour. For higher limits, you can get a free API key at addrly.app.', 'addrly'); ?></p>
+                <p><?php esc_html_e('No, an API key is not required. The plugin works out of the box with a limit of 60 requests per hour. For higher limits, you can get a free API key at addrly.io.', 'addrly'); ?></p>
                 
                 <h4><?php esc_html_e('What happens if the API is unavailable or rate limited?', 'addrly'); ?></h4>
                 <p><?php esc_html_e('If the API is unavailable or you exceed the rate limit, emails will be allowed through to prevent disruption to your site. An error will be logged for your reference.', 'addrly'); ?></p>
@@ -412,7 +420,7 @@ class Addrly
         $code = wp_remote_retrieve_response_code($response);
         
         if ($code === 429) {
-            $this->log_error(__('API Rate Limit Exceeded (429) - Get an API key at addrly.app for higher limits.', 'addrly'));
+            $this->log_error(__('API Rate Limit Exceeded (429) - Get an API key at addrly.io for higher limits.', 'addrly'));
             return null;
         }
         

@@ -4,7 +4,7 @@ Tags: email validation, disposable email, spam protection, email verification, w
 Requires at least: 5.2
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,7 +44,7 @@ If the API is unavailable or you hit the rate limit, emails are allowed through.
 
 = Optional: Get Higher Limits =
 
-1. Visit [addrly.app/signup](https://addrly.app/signup)
+1. Visit [addrly.io/signup](https://addrly.io/signup)
 2. Create a free account
 3. Copy your API key
 4. Paste it in Addrly settings
@@ -65,7 +65,7 @@ Same as above - emails are allowed through. Consider getting a free API key for 
 
 = How can I increase the request limit? =
 
-Get a free API key at [addrly.app](https://addrly.app). Free accounts get 2,500 requests/month.
+Get a free API key at [addrly.io](https://addrly.io). Free accounts get 2,500 requests/month.
 
 = Does it work with WooCommerce? =
 
@@ -75,12 +75,12 @@ Yes, it automatically validates emails during checkout.
 
 Yes, email fields in CF7 forms are automatically validated.
 
-== Screenshots ==
-
-1. Simple settings page with optional API key configuration
-2. Error logs showing rate limit and connection issues
-
 == Changelog ==
+
+= 1.1.0 =
+* Updated API endpoint to api.addrly.io
+* Updated request limit table for current plans
+* Minor copy and link updates
 
 = 1.0.0 =
 * Initial release
@@ -92,6 +92,9 @@ Yes, email fields in CF7 forms are automatically validated.
 * Error logging
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Required update — the API endpoint has moved to addrly.io. Older versions will stop validating emails.
 
 = 1.0.0 =
 Initial release.

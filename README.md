@@ -14,12 +14,11 @@ Addrly validates email addresses in real time against a database of 10M+ known d
 
 ## Installation
 
-1. Download the latest release
+1. Download the [latest release](https://github.com/addrlyq/addrly-wordpress/releases)
 2. Upload the `addrly` folder to `/wp-content/plugins/`
 3. Activate through **Plugins → Installed Plugins**
 4. Done — your site is protected
 
-Or search for **Addrly** in the WordPress plugin directory (pending approval).
 
 ## Configuration
 
@@ -31,17 +30,18 @@ For higher limits, add an API key in **Settings → Addrly**:
 |------|-------|
 | No API key | 60 requests/hour |
 | Free | 2,500 requests/month |
-| Pro | 100,000 requests/month |
+| Pro | 10,000 requests/month |
 | Ultra | 250,000 requests/month |
+| Scale | 500,000 requests/month |
 
-Get a free API key at [addrly.app/signup](https://addrly.app/signup).
+Get a free API key at [addrly.io/signup](https://addrly.io/signup).
 
 ## How it works
 
 1. A visitor submits a form with an email address
-2. Addrly checks the email against the API (`api.addrly.app`)
+2. Addrly checks the email against the API
 3. If the domain is disposable or flagged as spam, the submission is rejected
-4. If the API is unreachable or rate-limited, the email is allowed through (fail-open)
+4. If the API is unreachable or rate-limited, the email is allowed through
 
 All errors are logged in the Addrly admin panel for visibility.
 
